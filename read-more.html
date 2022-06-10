@@ -76,7 +76,7 @@
 
       <b><p class="">Book Online</p></b>
       <p id="book-online-description" class=""></p>
-      <button class="btn btn-primary treatment-book-now" type="button">Book Now</button>
+      <a href="tel:+9058378008"><button class="btn btn-primary treatment-book-now" type="button">Book Now</button></a>
     </div>
     <hr class="mb-5 mt-4" width="46%">
 
@@ -84,7 +84,7 @@
     <div class="container img-bottom-description mb-5 padding">
       <p class="lead">Location & Contact Details</p>
       
-      <p>Tel: + 6477848899<br>Email: theonesspapickering@gmail.com<br>981 Brock Rd, Pickering, Ontario L1W 3A4, Canada</p>
+      <p>Tel: (905) 837-8008<br>Email: theonesspapickering@gmail.com<br>981 Brock Rd, Pickering, Ontario L1W 3A4, Canada</p>
     </div>
 
     <!-- footer --> 
@@ -138,6 +138,7 @@
         document.querySelector("#book-online-description").innerHTML = "deep tissue massage<br>1 hr.  |  CA$60";
       }
 
+
       else if(buttonClickedKey == "read-more-2-1"){
         document.querySelector("#massage-name").innerHTML = "hot stones massage";
         document.querySelector("#time-and-price").innerHTML = "30 min. | CA$50";
@@ -166,6 +167,7 @@
         document.querySelector("#book-online-description").innerHTML = "hot stones massage<br>1 hr.  |  CA$90";
       }
 
+
       else if(buttonClickedKey == "read-more-3-1"){
         document.querySelector("#massage-name").innerHTML = "RMT Massage";
         document.querySelector("#time-and-price").innerHTML = "This massage service is provided by our professional Registered Massage Therapist (RMT).<br><br>30 min. | CA$60";
@@ -192,6 +194,35 @@
         document.querySelector("#massage-description").innerHTML = "As an increasingly popular health care option across Canada, massage Therapy can be used to<br>treat both acute and chronic conditions. RMTs can work with a variety of patient populations in<br>the treatment of illness, injury rehabilitation and disability . Massage therapy can be beneficial<br>to a wide variety of conditions and is a great addition to your everyday healthcare.";
 
         document.querySelector("#book-online-description").innerHTML = "RMT Massage<br>45 min.  |  CA$80";
+      }
+
+
+      else if(buttonClickedKey == "read-more-4-1"){
+        document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
+        document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>45 min. | CA$80";
+        document.querySelector("#massage-img").src = "images/aromatherapy.jpg"
+
+        document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
+
+        document.querySelector("#book-online-description").innerHTML = "Aromatherapy Treatment<br>45 min.  |  CA$80";
+      }
+      else if(buttonClickedKey == "read-more-4-2"){
+        document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
+        document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>60 min. | CA$110";
+        document.querySelector("#massage-img").src = "images/aromatherapy2.jpg"
+
+        document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
+
+        document.querySelector("#book-online-description").innerHTML = "Aromatherapy Treatment<br>60 min.  |  CA$110";
+      }
+      else if(buttonClickedKey == "read-more-4-3"){
+        document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
+        document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>90 min. | CA$160";
+        document.querySelector("#massage-img").src = "images/aromatherapy3.webp"
+
+        document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
+
+        document.querySelector("#book-online-description").innerHTML = "Aromatherapy Treatment<br>90 min.  |  CA$160";
       }
     </script>
     <script src="script.js"></script>
