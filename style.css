@@ -208,3 +208,12 @@ OVERLAY TITLE: https://www.w3schools.com/howto/howto_css_image_overlay_title.asp
   font-size:44px;
   letter-spacing: 2px;
 }
+
+#contact-form{
+  background-color: white;
+  padding:5%;
+}
+
+::placeholder{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

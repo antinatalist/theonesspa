@@ -69,21 +69,75 @@
     <img src="images/contact-img.webp" class="img-fluid mx-auto d-block mt-4">
 
     <!-- jumbotron-->
-    <div class="jumbotron jumbontron-fluid text-center">
-      <h1 class="display-4 bluecolored-text">CONTACT<BR>US</h1>
+    <div class="jumbotron jumbontron-fluid">
+      <h1 class="display-4 bluecolored-text text-center">CONTACT<BR>US</h1>
+      <p class="text-center">Call us or fill out the contact form below</p>
       <hr class="my-4">
-      <h2 class="">Tel: 905-837-8008</h2>
-      <h2>Email: <a href="mailto:theonesspapickering@gmail.com">theonesspapickering@gmail.com</h2></a>
+      <h2 class="text-center">Tel: 905-837-8008</h2>
+      <h2 class="text-center">Email: <a href="mailto:theonesspapickering@gmail.com">theonesspapickering@gmail.com</h2></a>
+      
+      
     </div>
 
-    <!-- google maps embed-->
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-12 my-5">
-          <p class="display-3 contact-info">981 BROCK RD, PICKERING, ONTARIO, CANADA, L1W 3A4</p>
+    <div class="row">
+      
+      <div class="col-lg-6 mb-5">
+        <div class="container">
+          <!-- contact form -->
+          <div id="contact-form" class="container shadow rounded">
+            <form class="form-group" onsubmit="sendEmail(); reset(); return false;">
+              <h1 class="display-4">Contact Form</h1>
+              <div class="row">
+                
+                <div class="col-6 mb-4">
+                  <label for="name" class="lead">Name:</label>
+                  <input id="name" type="text" class="form-control" placeholder="Enter Your Name" required>
+                </div>
+
+                <div class="col-6">
+                  <label for="email" class="lead">Email:</label>
+                  <input id="email" type="email" class="form-control" placeholder="Enter Your Email" required>
+                  <small class="form-text text-muted">We will never share this with anyone or spam your email.</small>
+                </div>
+
+                <div class="col-6 mb-4">
+                  <label for="subject" class="lead">Subject:</label>
+                  <input id="subject" type="text" class="form-control" placeholder="Write Your Subject" required>
+                </div>
+                
+                <div class="col-6">
+                  <label for="phone" class="lead">Phone:</label>
+                  <input id="phone" type="text" class="form-control" placeholder="Write Your Phone No" required>
+                  <small class="form-text text-muted">We will never share this with anyone.</small>
+                </div>
+                
+                <div class="col-12 mb-4">
+                  <label for="message" class="lead">Message:</label>
+                  <textarea id="message" class="form-control" placeholder="Write Your Message" required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-info px-4 py-2"><span class="lead">Send</span> <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
         </div>
-        <div class="col-md-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5756.243003057997!2d-79.0704721!3d43.8325786!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4deff2d0ae193%3A0x4bc7fdc9d580050f!2sThe%20One&#39;s%20Spa!5e0!3m2!1sen!2sca!4v1594305584840!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- google maps embed-->
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-12">
+              <p class="display-3 contact-info">981 BROCK RD, PICKERING, ONTARIO, CANADA, L1W 3A4</p>
+            </div>
+            <div class="col-md-12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5756.243003057997!2d-79.0704721!3d43.8325786!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4deff2d0ae193%3A0x4bc7fdc9d580050f!2sThe%20One&#39;s%20Spa!5e0!3m2!1sen!2sca!4v1594305584840!5m2!1sen!2sca" width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -105,5 +159,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
