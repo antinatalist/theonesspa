@@ -14,7 +14,7 @@ function sendEmail(){
     SecureToken : "0e6130fe-9489-4343-8d10-1638675a23ab",
     To : 'waymarketingltd@gmail.com',
     From : 'waymarketingltd@gmail.com',
-    Subject: document.querySelector("#subject").value,
+    Subject: `[The One's Spa] ${document.querySelector("#subject").value}`,
     Body : 
     `
     Name: ${document.querySelector("#name").value}<br><br>
