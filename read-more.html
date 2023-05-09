@@ -79,6 +79,23 @@
     <!-- massage picture -->
     <img id="massage-img" src="" class="mx-auto d-block padding img-fluid" alt="placeholder">
 
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-4">
+          <img src="" alt="" class="aromaPctures img-fluid">
+        </div>
+
+        <div class="col-4">
+          <img src="" alt="" class="aromaPctures img-fluid">
+        </div>
+
+        <div class="col-4">
+          <img src="" alt="" class="aromaPctures img-fluid">
+        </div>
+
+      </div>
+    </div>
+
     <!-- massage description, book online(time, price + button). <hr> -->
     <div class="container img-bottom-description">
       <p id="massage-description" class=""></p><br><Br>
@@ -113,17 +130,15 @@
     </footer>
 
     <script>
-      let test = localStorage.getItem(localStorage.key(0)) //value
       let buttonClickedKey = localStorage.key(0); //key
-      console.log("btnClicked: "+buttonClickedKey)
+      let imageSource = localStorage.getItem(buttonClickedKey) //value
+      console.log("button clicked: "+buttonClickedKey)
 
       //DEEP TISSUE MASSAGE ROW
       if(buttonClickedKey == "read-more-1-1"){
         document.querySelector("#massage-name").innerHTML = "deep tissue massage";
-
         document.querySelector("#time-and-price").innerHTML = "30 min. | CA$40";
-
-        document.querySelector("#massage-img").src = "images/deep-tissue-massage1.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Treats Chronic Back Pain.<br>Helps Lower High Blood Pressure.<br>Reduces Stress, Anxiety and Muscle Tension.<br>Breaks Up Scar Tissue.<br>Improves Athletic Recovery and Performance.<br>Can Help with Labor Pain and Delivery.<br>Reduces Arthritis Symptoms.";
 
@@ -132,7 +147,7 @@
       else if(buttonClickedKey == "read-more-1-2"){
         document.querySelector("#massage-name").innerHTML = "deep tissue massage";
         document.querySelector("#time-and-price").innerHTML = "45 min. | CA$50";
-        document.querySelector("#massage-img").src = "images/deep-tissue-massage2.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Treats Chronic Back Pain.<br>Helps Lower High Blood Pressure.<br>Reduces Stress, Anxiety and Muscle Tension.<br>Breaks Up Scar Tissue.<br>Improves Athletic Recovery and Performance.<br>Can Help with Labor Pain and Delivery.<br>Reduces Arthritis Symptoms.";
 
@@ -141,7 +156,7 @@
       else if(buttonClickedKey == "read-more-1-3"){
         document.querySelector("#massage-name").innerHTML = "deep tissue massage";
         document.querySelector("#time-and-price").innerHTML = "1 hr. | CA$60";
-        document.querySelector("#massage-img").src = "images/deep-tissue-massage3.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Treats Chronic Back Pain.<br>Helps Lower High Blood Pressure.<br>Reduces Stress, Anxiety and Muscle Tension.<br>Breaks Up Scar Tissue.<br>Improves Athletic Recovery and Performance.<br>Can Help with Labor Pain and Delivery.<br>Reduces Arthritis Symptoms.";
 
@@ -153,7 +168,7 @@
       else if(buttonClickedKey == "read-more-2-1"){
         document.querySelector("#massage-name").innerHTML = "hot stones massage";
         document.querySelector("#time-and-price").innerHTML = "30 min. | CA$50";
-        document.querySelector("#massage-img").src = "images/hotstone-massage1.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Relief from chronic pain, including fibromyalgia, arthritis and multiple sclerosis (MS)<br>Reduced stress and tension<br>Better joint mobility and flexibility<br>Muscle pain and spasm relief<br>Improved circulation<br>Insomnia support";
 
@@ -162,7 +177,7 @@
       else if(buttonClickedKey == "read-more-2-2"){
         document.querySelector("#massage-name").innerHTML = "hot stones massage";
         document.querySelector("#time-and-price").innerHTML = "45 min. | CA$70";
-        document.querySelector("#massage-img").src = "images/hotstone-massage2.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Relief from chronic pain, including fibromyalgia, arthritis and multiple sclerosis (MS)<br>Reduced stress and tension<br>Better joint mobility and flexibility<br>Muscle pain and spasm relief<br>Improved circulation<br>Insomnia support";
 
@@ -171,7 +186,7 @@
       else if(buttonClickedKey == "read-more-2-3"){
         document.querySelector("#massage-name").innerHTML = "hot stones massage";
         document.querySelector("#time-and-price").innerHTML = "1 hr. | CA$90";
-        document.querySelector("#massage-img").src = "images/hotstone-massage3.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "Relief from chronic pain, including fibromyalgia, arthritis and multiple sclerosis (MS)<br>Reduced stress and tension<br>Better joint mobility and flexibility<br>Muscle pain and spasm relief<br>Improved circulation<br>Insomnia support";
 
@@ -183,7 +198,7 @@
       else if(buttonClickedKey == "read-more-3-1"){
         document.querySelector("#massage-name").innerHTML = "RMT Massage";
         document.querySelector("#time-and-price").innerHTML = "This massage service is provided by our professional Registered Massage Therapist (RMT).<br><br>30 min. | CA$60";
-        document.querySelector("#massage-img").src = "images/rmt-massage1.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "As an increasingly popular health care option across Canada, massage Therapy can be used to<br>treat both acute and chronic conditions. RMTs can work with a variety of patient populations in<br>the treatment of illness, injury rehabilitation and disability . Massage therapy can be beneficial<br>to a wide variety of conditions and is a great addition to your everyday healthcare.";
 
@@ -192,7 +207,7 @@
       else if(buttonClickedKey == "read-more-3-2"){
         document.querySelector("#massage-name").innerHTML = "RMT Massage";
         document.querySelector("#time-and-price").innerHTML = "This massage service is provided by our professional Registered Massage Therapist (RMT).<br><br>1 hr. | CA$95";
-        document.querySelector("#massage-img").src = "images/carousel-2.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "As an increasingly popular health care option across Canada, massage Therapy can be used to<br>treat both acute and chronic conditions. RMTs can work with a variety of patient populations in<br>the treatment of illness, injury rehabilitation and disability . Massage therapy can be beneficial<br>to a wide variety of conditions and is a great addition to your everyday healthcare.";
 
@@ -201,7 +216,7 @@
       else if(buttonClickedKey == "read-more-3-3"){
         document.querySelector("#massage-name").innerHTML = "RMT Massage";
         document.querySelector("#time-and-price").innerHTML = "This massage service is provided by our professional Registered Massage Therapist (RMT).<br><br>45 min. | CA$80";
-        document.querySelector("#massage-img").src = "images/deep-tissue-massage1.webp"
+        document.querySelector("#massage-img").src = imageSource
 
         document.querySelector("#massage-description").innerHTML = "As an increasingly popular health care option across Canada, massage Therapy can be used to<br>treat both acute and chronic conditions. RMTs can work with a variety of patient populations in<br>the treatment of illness, injury rehabilitation and disability . Massage therapy can be beneficial<br>to a wide variety of conditions and is a great addition to your everyday healthcare.";
 
@@ -213,7 +228,13 @@
       else if(buttonClickedKey == "read-more-4-1"){
         document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
         document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>45 min. | CA$80";
-        document.querySelector("#massage-img").src = "images/aromaTreatment1.jpg"
+        document.querySelector("#massage-img").src = imageSource;
+        
+        //the 3 aromatherapy treatment photos
+        let aromaPctures = document.querySelectorAll(".aromaPctures")
+        aromaPctures[0].src = "images/aromaTreatment1.jpg"
+        aromaPctures[1].src = "images/aromaTreatment2.jpg"
+        aromaPctures[2].src = "images/aromaTreatment3.jpg"
 
         document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
 
@@ -222,7 +243,13 @@
       else if(buttonClickedKey == "read-more-4-2"){
         document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
         document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>60 min. | CA$110";
-        document.querySelector("#massage-img").src = "images/aromaTreatment2.jpg"
+        document.querySelector("#massage-img").src = imageSource;
+
+        //the 3 aromatherapy treatment photos
+        let aromaPctures = document.querySelectorAll(".aromaPctures")
+        aromaPctures[0].src = "images/aromaTreatment1.jpg"
+        aromaPctures[1].src = "images/aromaTreatment2.jpg"
+        aromaPctures[2].src = "images/aromaTreatment3.jpg"
 
         document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
 
@@ -231,12 +258,20 @@
       else if(buttonClickedKey == "read-more-4-3"){
         document.querySelector("#massage-name").innerHTML = "Aromatherapy Treatment";
         document.querySelector("#time-and-price").innerHTML = "Massage using high quality <u><b>natural plant extracts</b></u> to promote health and well-being<br><br>90 min. | CA$160";
-        document.querySelector("#massage-img").src = "images/aromaTreatment3.jpg"
+        document.querySelector("#massage-img").src = imageSource;
+
+        //the 3 aromatherapy treatment photos
+        let aromaPctures = document.querySelectorAll(".aromaPctures")
+        aromaPctures[0].src = "images/aromaTreatment1.jpg"
+        aromaPctures[1].src = "images/aromaTreatment2.jpg"
+        aromaPctures[2].src = "images/aromaTreatment3.jpg"
 
         document.querySelector("#massage-description").innerHTML = "<b>Aromatherapy benefits</b><br><ul><li>manage pain.</li><li>improve sleep quality.</li><li>reduce stress, agitation, and anxiety.</li><li>soothe sore joints.</li><li>treat headaches and migraines.</li><li>alleviate side effects of chemotherapy.</li><li>ease discomforts of labor.</li></ul>";
 
         document.querySelector("#book-online-description").innerHTML = "Aromatherapy Treatment<br>90 min.  |  CA$160";
       }
+
+      //localStorage.clear();
     </script>
     <script src="script.js"></script>
   </body>

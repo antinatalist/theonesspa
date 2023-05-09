@@ -29,15 +29,17 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        localStorage.clear();
+      });
       window.addEventListener('load', (event) => {
         //clear storage before loading 
         localStorage.clear();
       });
-      function getButtonClicked(buttonId){
+      function getButtonClicked(buttonId, imageSource){
         //var input = document.getElementById(buttonId); 
-        localStorage.setItem(buttonId, "value");
-        alert(`Input id: ${input.id}. Button Id: ${buttonId}`);
-        alert("breakpoint");
+        localStorage.setItem(buttonId, imageSource);
+        //alert(`Input id: ${input.id}. Button Id: ${buttonId}`);
       }
     </script>
   </head>
@@ -95,10 +97,10 @@
       <div class="row my-4 text-center">
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage1.webp" onclick="getButtonClicked('read-more-1-1')" alt="Deep Tissue Massage1"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage1.webp" onclick="getButtonClicked('read-more-1-1', 'images/deep-tissue-massage1.webp')" alt="Deep Tissue Massage1"></a>
             <div class="card-body">
               <h5 class="card-title">DEEP TISSUE<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-1-1" onclick="getButtonClicked('read-more-1-1')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-1-1" onclick="getButtonClicked('read-more-1-1', 'images/deep-tissue-massage1.webp')">Read More</a></p></u>
               <p class="card-text lead">30 min<Br>$40</p>
               <a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a>
             </div>
@@ -106,10 +108,10 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage2.webp" onclick="getButtonClicked('read-more-1-2')" alt="Deep Tissue Massage2"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage2.webp" onclick="getButtonClicked('read-more-1-2', 'images/deep-tissue-massage2.webp')" alt="Deep Tissue Massage2"></a>
             <div class="card-body">
               <h5 class="card-title">DEEP TISSUE<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-1-2" onclick="getButtonClicked('read-more-1-2')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-1-2" onclick="getButtonClicked('read-more-1-2', 'images/deep-tissue-massage2.webp')">Read More</a></p></u>
               <p class="card-text lead">45 min<Br>$50</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -117,10 +119,10 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage3.webp" onclick="getButtonClicked('read-more-1-3')" alt="Deep Tissue Massage3"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage3.webp" onclick="getButtonClicked('read-more-1-3', 'images/deep-tissue-massage3.webp')" alt="Deep Tissue Massage3"></a>
             <div class="card-body">
               <h5 class="card-title">DEEP TISSUE<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-1-3" onclick="getButtonClicked('read-more-1-3')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-1-3" onclick="getButtonClicked('read-more-1-3', 'images/deep-tissue-massage3.webp')">Read More</a></p></u>
               <p class="card-text lead">1 hr<Br>$70</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -132,10 +134,10 @@
       <div class="row my-4 text-center">
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage1.webp" onclick="getButtonClicked('read-more-2-1')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage1.webp" onclick="getButtonClicked('read-more-2-1', 'images/hotstone-massage1.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">HOT STONES<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-2-1" onclick="getButtonClicked('read-more-2-1')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-2-1" onclick="getButtonClicked('read-more-2-1', 'images/hotstone-massage1.webp')">Read More</a></p></u>
               <p class="card-text lead">30 min<Br>$50</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -143,10 +145,10 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage2.webp" onclick="getButtonClicked('read-more-2-2')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage2.webp" onclick="getButtonClicked('read-more-2-2', 'images/hotstone-massage2.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">HOT STONES<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-2-2" onclick="getButtonClicked('read-more-2-2')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-2-2" onclick="getButtonClicked('read-more-2-2', 'images/hotstone-massage2.webp')">Read More</a></p></u>
               <p class="card-text lead">45 min<Br>$70</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -154,10 +156,10 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage3.webp" onclick="getButtonClicked('read-more-2-3')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/hotstone-massage3.webp" onclick="getButtonClicked('read-more-2-3', 'images/hotstone-massage3.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">HOT STONES<br>MASSAGE</h5>
-              <u><p><a href="read-more.html" id="read-more-2-3" onclick="getButtonClicked('read-more-2-3')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-2-3" onclick="getButtonClicked('read-more-2-3', 'images/hotstone-massage3.webp')">Read More</a></p></u>
               <p class="card-text lead">1 hr<Br>$90</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -169,11 +171,11 @@
       <div class="row my-4 text-center">
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/rmt-massage1.webp" onclick="getButtonClicked('read-more-3-1')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/rmt-massage1.webp" onclick="getButtonClicked('read-more-3-1', 'images/rmt-massage1.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">RMT MASSAGE</h5>
               <p class="card-text">This massage service is<br>provided by our professional<br>Registered Massag...</p>
-              <u><p><a href="read-more.html" id="read-more-3-1" onclick="getButtonClicked('read-more-3-1')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-3-1" onclick="getButtonClicked('read-more-3-1', 'images/rmt-massage1.webp')">Read More</a></p></u>
               <p class="lead">30 min<br>$70</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -181,11 +183,11 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/carousel-2.webp" onclick="getButtonClicked('read-more-3-2')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/carousel-2.webp" onclick="getButtonClicked('read-more-3-2', 'images/carousel-2.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">RMT MASSAGE</h5>
               <p class="card-text">This massage service is<Br>provided by our professional<br>Registered Massag...</p>
-              <u><p><a href="read-more.html" id="read-more-3-2" onclick="getButtonClicked('read-more-3-2')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-3-2" onclick="getButtonClicked('read-more-3-2', 'images/carousel-2.webp')">Read More</a></p></u>
               <p class="lead">1 hr<br>$95</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -193,11 +195,11 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage1.webp" onclick="getButtonClicked('read-more-3-3')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/deep-tissue-massage1.webp" onclick="getButtonClicked('read-more-3-3', 'images/deep-tissue-massage1.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">RMT MASSAGE</h5>
               <p class="card-text">This massage service is<br>provided by our professional<br>Registered Massag...</p>
-              <u><p><a href="read-more.html" id="read-more-3-3" onclick="getButtonClicked('read-more-3-3')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-3-3" onclick="getButtonClicked('read-more-3-3', 'images/deep-tissue-massage1.webp')">Read More</a></p></u>
               <p class="lead">45 min<br>$80</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -209,11 +211,11 @@
       <div class="row my-4 text-center">
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/aromaTreatment1.jpg" onclick="getButtonClicked('read-more-4-1')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/aromatherapy1.jpg" onclick="getButtonClicked('read-more-4-1', 'images/aromatherapy1.jpg')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">Aromatherapy Treatment</h5>
               <p class="card-text">Massage using high quality natural plant extracts to promote heal...</p>
-              <u><p><a href="read-more.html" id="read-more-4-1" onclick="getButtonClicked('read-more-4-1')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-4-1" onclick="getButtonClicked('read-more-4-1', 'images/aromatherapy1.jpg')">Read More</a></p></u>
               <p class="lead">45 min<br>$80</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -221,11 +223,11 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/aromaTreatment2.jpg" onclick="getButtonClicked('read-more-4-2')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/aromatherapy2.jpg" onclick="getButtonClicked('read-more-4-2', 'images/aromatherapy2.jpg')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">Aromatherapy Treatment</h5>
               <p class="card-text">Massage using high quality natural plant extracts to promote heal...</p>
-              <u><p><a href="read-more.html" id="read-more-4-2" onclick="getButtonClicked('read-more-4-2')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-4-2" onclick="getButtonClicked('read-more-4-2', 'images/aromatherapy2.jpg')">Read More</a></p></u>
               <p class="lead">60 min<br>$110</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
@@ -233,11 +235,11 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <a href="read-more.html"><img class="card-img-top" src="images/aromaTreatment3.jpg" onclick="getButtonClicked('read-more-4-3')" alt="image placeholder"></a>
+            <a href="read-more.html"><img class="card-img-top" src="images/aromatherapy3.webp" onclick="getButtonClicked('read-more-4-3', 'images/aromatherapy3.webp')" alt="image placeholder"></a>
             <div class="card-body">
               <h5 class="card-title">Aromatherapy Treatment</h5>
               <p class="card-text">Massage using high quality natural plant extracts to promote heal...</p>
-              <u><p><a href="read-more.html" id="read-more-4-3" onclick="getButtonClicked('read-more-4-3')">Read More</a></p></u>
+              <u><p><a href="read-more.html" id="read-more-4-3" onclick="getButtonClicked('read-more-4-3', 'images/aromatherapy3.webp')">Read More</a></p></u>
               <p class="lead">90 min<br>$160</p>
               <p><a href="tel:+9058378008" class="btn btn-primary btn-lg treatment-book-now" role="button">Book Now</a></p>
             </div>
